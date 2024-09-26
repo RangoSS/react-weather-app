@@ -91,6 +91,7 @@ const WeatherApp = () => {
 
       {/* Toggle Unit */}
       <div className="text-center mb-3">
+        <p>hellooooo</p>
         <button className="btn btn-secondary" onClick={toggleUnit}>
           Switch to {unit === 'C' ? 'Fahrenheit' : 'Celsius'}
         </button>
@@ -115,7 +116,7 @@ const WeatherApp = () => {
       {/* Hourly Forecast - Horizontal Flex */}
       <div className="d-flex overflow-auto mb-1 fs-6 hourly">
         {hourlyForecast[0] && hourlyForecast[0].map((hour, index) => (
-          <div className="card mr-2" key={index} style={{minWidth:'120px'}} >
+          <div className="card mr-2" key={index} style={{ minWidth: '120px' }} >
             <div className="card-body text-center">
               <p>{new Date(hour.time).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</p>
               <p>{unit === 'C' ? hour.temp_c : hour.temp_f}°{unit}</p>
